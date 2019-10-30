@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{system.title}">Title</title>
+</head>
+<body>
+<h1 th:text="#{info.welcome}"></h1>
+<h1 th:text="#{info.about}"></h1>
+<h1 th:text="#{info.help}"></h1>
+<p>
+<ul>
+    <li><a th:href="@{/(lang=zh_CN)}">中文(简体)</a></li>
+    <li><a th:href="@{/(lang=zh_TW)}">中文(繁體)</a></li>
+    <li><a th:href="@{/(lang=en_US)}">English(United States)</a></li>
+</ul>
+</p>
+</body>
+</html>
