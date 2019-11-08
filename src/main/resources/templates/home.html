@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{system.title}">Title</title>
+    <style type="text/css">
+        body {
+            font-size: 20px;
+        }
+
+        #content span {
+            margin-left: 100px;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        #foot{
+            margin-top: 200px;
+        }
+
+        #i18n span {
+            margin-left: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<div id="content">
+    <span th:text="#{info.welcome}"></span>
+    <span th:text="#{info.about}"></span>
+    <span th:text="#{info.help}"></span>
+</div>
+
+<p id="foot" th:text="${copyrightMsg}"></p>
+<p id="i18n">
+    <span th:text="#{system.changeLocale}"></span>
+    <span><a th:href="@{/(lang=zh_CN)}">中文(简体)</a></span>
+    <span><a th:href="@{/(lang=zh_TW)}">中文(繁體)</a></span>
+    <span><a th:href="@{/(lang=en_US)}">English(United States)</a></span>
+    <span><a th:href="@{/(lang=ja_JP)}">日本語(日本)</a></span>
+</p>
+</body>
+</html>
